@@ -12,7 +12,7 @@ jobs:
       - run: ls -a
 
       - name: Build image
-        run: RUN mvn -B clean package --file pom.xml
+        run: docker build -t mavenproj .
 
 #      - name: create 2 tagged images
 
