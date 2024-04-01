@@ -11,8 +11,8 @@ jobs:
       - run: echo "repo fetched"
       - run: ls -a
   
-      - name: Bump Version
-        run: mvn versions:set -DnewVersion=1.0.${{github.run_number}}
+#      - name: Bump Version
+#        run: mvn versions:set -DnewVersion=1.0.${{github.run_number}}
         
 
       - name: Build image
