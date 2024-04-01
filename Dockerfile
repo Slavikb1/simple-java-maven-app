@@ -6,7 +6,7 @@ RUN mvn clean package
 
 FROM openjdk:8-jre-alpine
 
-ARG VERSION=1
+ARG VERSION=0
 
 ENV VERSION=$VERSION
 
