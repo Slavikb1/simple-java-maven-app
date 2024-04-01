@@ -8,7 +8,7 @@ FROM openjdk:8-jre-alpine
 
 ENV ver=$version
 
-COPY --from=builder /target/my-app-1.0.$ver.jar .
+COPY --from=builder /target/my-app-1.0.$ver.jar /target/my-app-1.0.$ver.jar
 
 CMD java -jar /target/my-app-1.0.$ver.jar
 
