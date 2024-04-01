@@ -8,5 +8,5 @@ resource "aws_instance" "pomapp" {
     Name = "pom deploy"
   }
 
-  user_data = "${file("script.sh")}"
+  user_data = "${file("dockerinit.sh")}"
 }
