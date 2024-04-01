@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 
 env:
-  version: ${{github.run_number}}
+  version: ${{ github.run_number }}
         
 jobs:
   build:
@@ -34,4 +34,4 @@ jobs:
           file: ./Dockerfile
           build-args: VERSION=$version
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/maven_project:$version , ${{ secrets.DOCKER_PASS }}/maven_project:latest}
+          tags: ${{ secrets.DOCKER_USER }}/maven_project:$version , ${{ secrets.DOCKER_PASS }}/maven_project:latest
