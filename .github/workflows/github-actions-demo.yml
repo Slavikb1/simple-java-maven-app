@@ -1,6 +1,7 @@
 name: GitHub Actions Project
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,12 +16,12 @@ jobs:
 
       - name: create 2 tagged images
 
-      - name: run image
-        run: docker run "--name project java_project:latest"
+#      - name: run image
+#        run: docker run "--name project java_project:latest"
 
       - name: login to docker hub
-        run: "connect to docker with credentials"
+        run: echo "connect to docker with credentials"
 
       - name: upload image
-        run: ""
+        run: echo ""
 
