@@ -12,7 +12,8 @@ jobs:
       - run: ls -a
   
       - name: Bump Version
-        run: mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false
+        run: mvn versions:set -DnewVersion=1.0.${{github.run_number}}
+        
 
       - name: Build image
         run: docker build -t mavenproj .
