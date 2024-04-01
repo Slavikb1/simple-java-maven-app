@@ -8,4 +8,4 @@ sudo apt-get install -y docker-ce
 sudo usermod -aG docker ubuntu 
 sudo usermod -aG docker $USER
 
-sudo ducker run slavikb/maven_project:latest
+sudo ducker run -d slavikb/maven_project:latest
