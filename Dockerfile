@@ -1,6 +1,8 @@
 FROM maven:eclipse-temurin as builder
 
-ENV ver $version 
+ARG var $version
+
+ENV ver $var  
 
 COPY . .
 
