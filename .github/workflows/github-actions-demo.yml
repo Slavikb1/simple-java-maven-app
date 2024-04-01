@@ -14,8 +14,8 @@ jobs:
       - run: echo "repo fetched"
       - run: ls -a
   
-      - name: Bump Version
-        run: mvn versions:set -DnewVersion=1.0.$version
+#      - name: Bump Version
+#        run: mvn versions:set -DnewVersion=1.0.$version
         
 
       - name: Build image
