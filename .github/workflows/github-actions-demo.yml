@@ -7,21 +7,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - run: echo "repo fetched"
       - run: ls -a
 
       - name: Build image
         run: echo "build image multistage"
 
-      - name: create 2 tagged images
+#      - name: create 2 tagged images
 
 #      - name: run image
 #        run: docker run "--name project java_project:latest"
 
-      - name: login to docker hub
-        run: echo "connect to docker with credentials"
+#      - name: login to docker hub
+#        run: echo "connect to docker with credentials"
 
-      - name: upload image
-        run: echo ""
+#      - name: upload image
+#        run: echo ""
 
