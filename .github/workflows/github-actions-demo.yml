@@ -32,6 +32,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          build-args: VERSION=$version
+          build-args: VERSION=${{ env.version }}
           push: true
-          tags: ${{ secrets.DOCKER_USER }}/maven_project:$version , ${{ secrets.DOCKER_PASS }}/maven_project:latest
+          tags: ${{ secrets.DOCKER_USER }}/maven_project:${{ env.version }} , ${{ secrets.DOCKER_PASS }}/maven_project:latest
