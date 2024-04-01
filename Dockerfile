@@ -6,6 +6,10 @@ RUN mvn clean package
 
 FROM openjdk:8-jre-alpine
 
-COPY --from=builder /target/my-app-1.0.0.jar .
+ARG VERSION=1
 
-CMD java -jar /target/my-app-1.0.0.jar
+ENV VERSION=$VERSION
+
+COPY --from=builder /target/my-app-1.0.$VERSION.jar .
+
+CMD java -jar /target/my-app-1.0.$VERSION.jar
